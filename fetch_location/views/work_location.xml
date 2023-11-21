@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="work_location_form_coordinates_fetch" model="ir.ui.view">
+            <field name="name">work.location.coordinates.form.fetch</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='category_id']" position="after">
+                        <field name="is_today" invisible="1"/>
+                        <field name="provider_latitude" invisible="1"/>
+                        <field name="provider_longitude" invisible="1"/>
+                        <field name="description" widget="location_ci"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

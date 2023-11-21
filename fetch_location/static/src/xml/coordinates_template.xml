@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates>
+    <t t-name="widget_coordinates.WidgetCoordinates" owl="1">
+        <button t-on-click="onButtonClick" t-att-name="props.method" type="button" class="btn" t-att-title="props.title">
+            <i class="fa fa-map-marker" style="font-size:20px;color:red"/>
+            Get My Current Coordinate
+        </button>
+        <br/>
+        
+        <iframe width="100" height="100" t-attf-src="https://maps.google.com/?q={{latitude}},{{longitude}}&amp;z=11&amp;output=embed">
+        </iframe>
+    </t>
+</templates>
+
